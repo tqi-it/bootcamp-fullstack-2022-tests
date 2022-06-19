@@ -13,6 +13,8 @@
 - **Executar testes pelo terminal**
   > ./gradlew clean test
 
+- **Relatório html**
+> ./build/reports/test/index.html
 
 #### Referências
 - [Rest-assured](https://rest-assured.io/)

@@ -1,6 +1,7 @@
 package br.com.tqi.bootcamp.bookstore.createbook;
 
 import br.com.tqi.bootcamp.bookstore.BaseTest;
+import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
@@ -13,18 +14,19 @@ import static br.com.tqi.bootcamp.bookstore.Data.AUTHOR_CODE;
 import static br.com.tqi.bootcamp.bookstore.Data.FILE;
 import static br.com.tqi.bootcamp.bookstore.Data.INVALID_NAME_LENGTH;
 import static br.com.tqi.bootcamp.bookstore.Data.MUST_HAVE_VALUE;
+import static br.com.tqi.bootcamp.bookstore.Data.PASSWORD;
 import static br.com.tqi.bootcamp.bookstore.Data.PRICE;
 import static br.com.tqi.bootcamp.bookstore.Data.REQUEST_FIELD_NAME;
 import static br.com.tqi.bootcamp.bookstore.Data.STRING_WITH_101_CHARACTERS;
 import static br.com.tqi.bootcamp.bookstore.Data.STRING_WITH_4_CHARACTERS;
-import static io.restassured.RestAssured.given;
+import static br.com.tqi.bootcamp.bookstore.Data.USER_NAME;
 
-public class BadRequestCreateBookScenarios  extends BaseTest {
+public class BadRequestCreateBookScenarios extends BaseTest {
 
     @Test
     public void shouldNotCreateBookWithoutNameField() {
-        given()
-                .auth().basic("bootcamp", "vempratqi")
+        RestAssured.given()
+                .auth().basic(USER_NAME, PASSWORD)
                 .header("Content-Type", "multipart/form-data")
                 .multiPart("price", PRICE)
                 .multiPart("author_code", AUTHOR_CODE)
@@ -40,8 +42,8 @@ public class BadRequestCreateBookScenarios  extends BaseTest {
     @ParameterizedTest
     @ValueSource(strings = {STRING_WITH_4_CHARACTERS, STRING_WITH_101_CHARACTERS})
     public void shouldNotCreateBookWithInvalidNameLength(String name) {
-        given()
-                .auth().basic("bootcamp", "vempratqi")
+        RestAssured.given()
+                .auth().basic(USER_NAME, PASSWORD)
                 .header("Content-Type", "multipart/form-data")
                 .multiPart("name", name)
                 .multiPart("price", PRICE)
