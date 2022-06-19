@@ -6,7 +6,7 @@ var loginPage = new LoginPage()
 var bookPage = new BookPage()
 var addBookPage = new AddBookPage()
 
-beforeEach( function() {
+before(function() {
     cy.fixture('book').then((book) => {
         this.book = book
     })
