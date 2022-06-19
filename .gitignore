@@ -11,8 +11,10 @@ build/
 
 .DS_Store
 
-/videos
+videos/
 
-/screenshots
+screenshots/
+
+reports/
 
 node_modules
