@@ -1,0 +1,13 @@
+{
+    "viewportWidth": 1000,
+    "viewportHeight": 660,
+    "baseUrl": "http://localhost:3000",
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "reportPageTitle": "Test Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+    }
+}

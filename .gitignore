@@ -10,3 +10,9 @@ build/
 .gradle
 
 .DS_Store
+
+/videos
+
+/screenshots
+
+node_modules
