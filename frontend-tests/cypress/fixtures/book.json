@@ -1,0 +1,12 @@
+{
+  "valid_book": {
+    "name": "Automação de testes",
+    "author": "Rodrigo Magalhães",
+    "price": "9950"
+  },
+  "empty_book_name": {
+    "name": " ",
+    "author": "Diego Paiva",
+    "price": "10150"
+  }
+}

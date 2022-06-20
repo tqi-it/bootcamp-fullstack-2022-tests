@@ -1,0 +1,20 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+build/
+
+.gradle
+
+.DS_Store
+
+videos/
+
+screenshots/
+
+reports/
+
+node_modules

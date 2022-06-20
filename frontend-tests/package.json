@@ -1,0 +1,19 @@
+{
+  "name": "frontend-tests",
+  "version": "1.0.0",
+  "description": "Testes do front do projeto com react",
+  "main": "index.js",
+  "scripts": {
+    "open": "npx cypress open",
+    "test": "npx cypress run",
+    "test-chrome": "npx cypress run -b chrome",
+    "test-chrome-render": "npx cypress run -b chrome --headed"
+
+  },
+  "author": "Rodrigo Magalhães",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.0.0",
+    "cypress-mochawesome-reporter": "^3.1.0"
+  }
+}
